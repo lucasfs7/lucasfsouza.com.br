@@ -19,4 +19,5 @@ sudo apt-get -y install nodejs
 
 # install project dependencies
 echo "Installing project dependencies"
+sudo npm install -g coffee-script
 npm install
