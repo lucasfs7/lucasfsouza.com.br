@@ -1,0 +1,69 @@
+@import 'nib'
+@import url('http://fonts.googleapis.com/css?family=Varela+Round')
+
+global-reset()
+
+main-color = #4c4848
+background-color = #ececec
+link-color = #7b2f5d
+
+body
+  font-family 'Varela Round', sans-serif
+  background-color background-color
+  color main-color
+
+a
+  color link-color
+  font-style italic
+  text-decoration none
+  transition color 0.5s linear
+
+  &:hover
+    color darken(link-color, 50%);
+
+.main
+  width 960px
+  margin 50px auto 0 auto
+
+  .profile-picture
+    width 400px
+    margin 0 20px 0 0
+    float left
+    border 20px solid #fff
+
+    img
+      width 100%
+
+  header,
+  section,
+  footer
+    margin 0 0 20px 480px
+    padding-bottom 20px
+    border-bottom 1px dashed lighten(main-color, 50%)
+
+    h1,
+    h2
+      line-height 1.5em
+
+    h1
+      font-size 34px
+
+    h2
+      font-size 24px
+
+    h3
+      font-size 20px
+
+    ul
+      margin-top 20px
+
+      li
+        margin-top 10px
+        font-size 20px
+
+      a
+        &:before
+          margin-right 10px
+
+  .social
+    border 0
