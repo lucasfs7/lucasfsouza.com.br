@@ -54,7 +54,9 @@ gulp.task('compile:html', function() {
 
 gulp.task('compile:css', function () {
   var t = gulp.src(path.stylus);
-  t = t.pipe(stylus());
+  t = t.pipe(stylus({
+    use: [(require("nib")())]
+  }));
 
   if (argv.c) {
     t = t.pipe(minifyCSS());
