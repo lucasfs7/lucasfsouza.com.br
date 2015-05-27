@@ -31,6 +31,7 @@ var path = {
     css:'./bower_components/**/*.css' ,
     js: './bower_components/**/*.js'
   },
+  favicon: './src/favicon.ico',
   dest: {
     root: './www/',
     css: './www/css/',
@@ -138,7 +139,13 @@ gulp.task('copy:fonts', function() {
     .pipe(gulp.dest(path.dest.fonts));
 });
 
-gulp.task('build', ['compile:html', 'compile:css', 'concat:stylesheets', 'concat:scripts:app', 'concat:scripts:vendor', 'copy:modules:js', 'copy:modules:css', 'compress:images', 'copy:fonts']);
+gulp.task('copy:favicon', function() {
+  gulp.src(path.favicon)
+    .pipe(changed(path.dest.root))
+    .pipe(gulp.dest(path.dest.root));
+});
+
+gulp.task('build', ['compile:html', 'compile:css', 'concat:stylesheets', 'concat:scripts:app', 'concat:scripts:vendor', 'copy:modules:js', 'copy:modules:css', 'compress:images', 'copy:fonts', 'copy:favicon']);
 
 gulp.task('watch', function() {
   gulp.watch(path.jade, ['compile:html']);
@@ -150,6 +157,7 @@ gulp.task('watch', function() {
   gulp.watch(path.scripts.vendor, ['copy:modules:css']);
   gulp.watch(path.images, ['compress:images']);
   gulp.watch(path.fontes, ['copy:fonts']);
+  gulp.watch(path.fontes, ['copy:favicon']);
 });
 
 gulp.task('default', ['build', 'watch']);
