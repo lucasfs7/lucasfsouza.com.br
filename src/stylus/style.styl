@@ -22,11 +22,12 @@ a
     color darken(link-color, 50%);
 
 .main
-  width 960px
+  max-width 960px
   margin 50px auto 0 auto
+  padding 0 20px
 
   .profile-picture
-    width 400px
+    max-width 400px
     margin 0 20px 0 0
     float left
     border 20px solid #fff
@@ -67,3 +68,29 @@ a
 
   .social
     border 0
+
+  @media (max-width: 760px)
+    .profile-picture
+      margin 20px auto 20px auto
+      float none
+
+    header,
+    section,
+    footer
+      max-width 440px
+      margin 0 auto 20px auto
+
+    header,
+    .contact
+      text-align center
+
+    .social
+      text-align center
+
+      ul
+        max-width 360px
+        margin 20px auto 0 auto
+
+        li
+          margin 5px
+          display inline-block
