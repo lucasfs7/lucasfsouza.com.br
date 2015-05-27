@@ -1,61 +1,35 @@
-!!!5
-html(lang="en")
-  head
-    title Lucas F. Souza - lucasfs7
-    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
-    link(rel="stylesheet", href="/stylesheets/style.css")
-    link(rel="shortcut icon", href="/favicon.ico", type="image/ico")
+extends layouts/app
+block content
+  article(class="main")
+    figure(class="profile-picture")
+      img(src="http://www.gravatar.com/avatar/5cdcf7d012eaab8b6eb66d7abd8dab60", alt="Lucas F. Souza")
 
-    <meta property="og:title" content="Lucas F. Souza">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://lucasfsouza.com.br">
-    <meta property="og:image" content="https://pbs.twimg.com/profile_images/3589194322/aed23f0bf404d430aefd1c30bafde31f.jpeg">
-    <meta property="og:site_name" content="Interface Engineer at Palpiteros">
-    <meta property="og:description" content="coffee, beer, bacon, comic books, javascript, css3, html5 and more">
-    <meta property="og:locale" content="pt_BR">
+    header(class="description")
+      h1 Lucas F. Souza
+      h2 Interface Engineer at Palpiteros
 
-    script(type='text/javascript').
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-24773281-1']);
-      _gaq.push(['_trackPageview']);
+    section(class="contact")
+      h3 Contact me in 
+        a(class="email", href="mailto:me@lucasfsouza.com.br") me@lucasfsouza.com.br
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    section(class="social")
+      h3 Find me on
 
-  body
-    article(class="main")
-      figure(class="profile-picture")
-        img(src="http://www.gravatar.com/avatar/5cdcf7d012eaab8b6eb66d7abd8dab60", alt="Lucas F. Souza")
+      ul
+        li(class="blog")
+          a(class="fa fa-rss", href="/blog") my blog
 
-      header(class="description")
-        h1 Lucas F. Souza
-        h2 Interface Engineer at Palpiteros
+        li(class="github")
+          a(class="fa fa-github", href="http://github.com/lucasfs7") github
 
-      section(class="contact")
-        h3 Contact me in 
-          a(class="email", href="mailto:me@lucasfsouza.com.br") me@lucasfsouza.com.br
+        li(class="linkedin")
+          a(class="fa fa-linkedin", href="http://br.linkedin.com/in/lucasfs7") linkedin
 
-      section(class="social")
-        h3 Find me on
+        li(class="medium")
+          a(class="fa fa-align-justify", href="http://medium.com/@lucasfs7") medium
 
-        ul
-          li(class="blog")
-            a(class="fa fa-rss", href="/blog") my blog
+        li(class="twitter")
+          a(class="fa fa-twitter", href="http://twitter.com/lucasfs7") twitter
 
-          li(class="github")
-            a(class="fa fa-github", href="http://github.com/lucasfs7") github
-
-          li(class="linkedin")
-            a(class="fa fa-linkedin", href="http://br.linkedin.com/in/lucasfs7") linkedin
-
-          li(class="medium")
-            a(class="fa fa-align-justify", href="http://medium.com/@lucasfs7") medium
-
-          li(class="twitter")
-            a(class="fa fa-twitter", href="http://twitter.com/lucasfs7") twitter
-
-          li(class="google-plus")
-            a(class="fa fa-google-plus", href="https://plus.google.com/113387604686768353551/posts") google+
+        li(class="google-plus")
+          a(class="fa fa-google-plus", href="https://plus.google.com/113387604686768353551/posts") google+
