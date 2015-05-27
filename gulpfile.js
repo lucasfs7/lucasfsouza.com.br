@@ -9,6 +9,7 @@ var argv = require('minimist')(process.argv.slice(2));
 var minifyCSS = require('gulp-minify-css');
 var chmod = require('gulp-chmod');
 var changed = require('gulp-changed');
+var rsync = require('gulp-rsync');
 
 var path = {
   layouts: './src/layouts/**/*.jade',
@@ -40,6 +41,16 @@ var path = {
     fonts: './www/fonts'
   }
 };
+
+gulp.task('deploy', function() {
+  gulp.src(path.dest.root+'**')
+    .pipe(rsync({
+      root: path.dest.root,
+      destination: '/home/lucasfs7',
+      hostname: 'lucasfsouza.com.br',
+      username: 'root'
+    }));
+});
 
 gulp.task('compile:html', function() {
   var jadeOpts = {};
