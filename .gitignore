@@ -1,8 +1,4 @@
-node_modules/
-www/
-npm-debug.log
-.vagrant/
-bower_components/
+public/
 
 # OS generated files #
 ######################

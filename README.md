@@ -1,1 +1,3 @@
-My personal hotsite using jade and stylus.
+My personal website.
+
+Statically generated with [Zola](https://www.getzola.org)

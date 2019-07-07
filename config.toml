@@ -1,0 +1,12 @@
+base_url = "https://lucasfsouza.com.br"
+title = "Lucas F. Souza"
+description = "Programador. Nomade. Pai. Amador."
+default_language = "pt"
+
+generate_rss = true
+compile_sass = false
+highlight_code = false
+build_search_index = false
+
+[extra]
+# Put all your custom variables here
