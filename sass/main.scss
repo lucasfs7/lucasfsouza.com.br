@@ -1,0 +1,76 @@
+@import "includes/_colors.scss";
+
+$base-spacing: 10px;
+
+html,
+body {
+  background-color: $background;
+  color: $foreground;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: $base-spacing;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: $color4;
+
+  &:visited {
+    color: $color2;
+  }
+
+  &:active {
+    color: $color3;
+  }
+}
+
+#main-header,
+#content,
+#main-footer {
+  width: 800px;
+  margin: auto;
+  padding: $base-spacing 0;
+}
+
+#main-header {
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+#content {
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+}
+
+#main-footer {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $base-spacing;
+  }
+}
